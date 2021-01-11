@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:paddingLeft="8dp"
+                android:id="@+id/dialogGatheringFunctionSaveLogForImage"
+                android:alpha="0.68"
+                android:textColor="#000"
+                android:text="영상로그정보수집"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:background="#ececec"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"/>
+        <ListView
+            android:id="@+id/dialogGatheringFunctionListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<TextView-->
+            <!--android:id="@+id/dialogGatheringFunctionCancel"-->
+            <!--android:text="취소"-->
+            <!--android:background="@drawable/selector_white_gray"-->
+            <!--android:alpha="0.68"-->
+            <!--android:textColor="#000"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="8dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/dialogGatheringFunctionConfirm"-->
+            <!--android:text="확인"-->
+            <!--android:background="@drawable/selector_white_gray"-->
+            <!--android:alpha="0.68"-->
+            <!--android:textColor="#000"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="8dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+    <!--</LinearLayout>-->
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/file_layout"
+        android:layout_width="158dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        android:background="@color/c_5f5d70">
+
+        <TextView
+            android:id="@+id/file_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13.6dp"
+            android:layout_marginTop="13sp"
+            android:text="01"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="34.4dp"
+            android:layout_height="2dp"
+            android:layout_above="@+id/address_name"
+            android:layout_marginStart="13.6dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/floors_lever"
+            android:layout_marginStart="13.6dp"
+            android:text="성남시 분당구 삼평동"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/floors_lever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="13.6dp"
+            android:layout_marginBottom="29dp"
+            android:text="3F"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/new_layout"
+        android:layout_width="158dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="12dp"
+        android:visibility="visible"
+        android:background="@color/c_00ca9d">
+
+        <ImageView
+            android:id="@+id/ic_new_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="63dp"
+            android:src="@mipmap/ic_new" />
+
+        <TextView
+            android:id="@+id/box_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_new_img"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/new_box"
+            android:textColor="#ffffff"
+            android:layout_marginTop="14dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

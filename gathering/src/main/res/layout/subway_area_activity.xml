@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/subway_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/area_title_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="31dp"
+                android:text="@string/subway_info_setting"
+                android:textColor="#5f5d70"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="31dp"
+                    android:text="지 역"
+                    android:textColor="#5f5d70"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/area_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dip"
+                    android:layout_marginStart="20dip"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dip"
+                    android:background="@drawable/sub_btn01"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/area_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="1dip"
+                        android:layout_marginBottom="1dip"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/area_btn"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="1dip"
+                        android:layout_marginBottom="1dip"
+                        android:layout_weight="0"
+                        android:background="@drawable/sub_btn04"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text=""
+                    android:textColor="#5f5d70"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/line_num_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dip"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dip"
+                    android:background="@drawable/sub_btn01"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/line_num_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="1dip"
+                        android:layout_marginBottom="1dip"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/line_num_btn"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="1dip"
+                        android:layout_marginBottom="1dip"
+                        android:layout_weight="0"
+                        android:background="@drawable/sub_btn04"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="역사"
+                    android:textColor="#5f5d70"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/name_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dip"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dip"
+                    android:background="@drawable/sub_btn01"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/name_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/name_btn"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="1dip"
+                        android:layout_marginBottom="1dip"
+                        android:layout_weight="0"
+                        android:background="@drawable/sub_btn04"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="층 수"
+                    android:textColor="#5f5d70"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/floors_lever_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dip"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dip"
+                    android:background="@drawable/sub_btn01"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/floors_lever_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="1dip"
+                        android:layout_marginBottom="1dip"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/floors_lever_btn"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="1dip"
+                        android:layout_marginBottom="1dip"
+                        android:layout_weight="0"
+                        android:background="@drawable/sub_btn04"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/office_layout"
+            layout="@layout/activity_office"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/company_subway_btn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/company"
+                android:textSize="21sp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/make_map_btn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="19dp"
+            android:background="@color/c_00ca9d">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/setting"
+                android:textColor="#ffffff"
+                android:textSize="14.9sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

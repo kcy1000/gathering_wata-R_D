@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "984077465184",
+    "firebase_url": "https://lbsgathering.firebaseio.com",
+    "project_id": "lbsgathering",
+    "storage_bucket": "lbsgathering.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984077465184:android:81747bf38e27f255ba7505",
+        "android_client_info": {
+          "package_name": "com.geotwo.LBS.Gathering.LAB_TEST"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984077465184-62mnnieb68o7e98rf27o3udlsq5ma6mk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmYyGDQkqS7XMI1iRfPYZloiiiT0V9xNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984077465184-62mnnieb68o7e98rf27o3udlsq5ma6mk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

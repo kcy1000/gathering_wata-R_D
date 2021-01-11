@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/voucher_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/control_box_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="88dp"
+        android:background="@color/color_CCffffff">
+
+        <RelativeLayout
+            android:id="@+id/record_type_layout"
+            android:layout_width="40dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_background"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/record_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/again_record"
+                android:textColor="#ffffff"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/record_type_layout"
+            android:layout_marginTop="5dp">
+
+            <RelativeLayout
+                android:id="@+id/record_line_num_layout"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="21dp"
+                android:background="@drawable/oval_green_background">
+
+                <TextView
+                    android:id="@+id/record_line_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:letterSpacing="-0.07"
+                    android:lineSpacingExtra="22sp"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="9dp"
+                android:layout_toEndOf="@+id/record_line_num_layout"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/record_step_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8sp"
+                    android:text="0"
+                    android:textColor="#5f5d70"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/of_steps_taken"
+                    android:textColor="#5f5d70"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8sp"
+                    android:text=" / "
+                    android:textColor="#898698"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/record_step_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8sp"
+                    android:text="0m"
+                    android:textColor="#898698"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/option_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="32dp"
+                    android:src="@mipmap/bt_list" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/direction_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_above="@+id/control_box_layout"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/round_background"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/direction_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/direction"
+            android:textColor="#ffffff"
+            android:textSize="14.9sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/control_box_layout"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/ic_undo_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector_option_background"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/ic_undo_btn_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/reverse"
+                    android:textColor="#5f5d70"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/file_upload_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector_option_background"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="파일전송"
+                    android:textColor="#5f5d70"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/poi_file_upload_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector_option_background"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="POI 전송"
+                    android:textColor="#5f5d70"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/start_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_background_00ca9d">
+
+                <TextView
+                    android:id="@+id/start_bt_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/start"
+                    android:textColor="#5f5d70"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line_list_layout"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector_option_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="수집 정보"
+                    android:textColor="#5f5d70"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/step_btn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1.2"
+                android:background="@drawable/btn_selector_option_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/collection"
+                    android:textColor="#5f5d70"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/control_box_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp">
+
+        <LinearLayout
+            android:id="@+id/red_signal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <View
+                android:id="@+id/red_signal_icon"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/oval_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:letterSpacing="-0.05"
+                android:lineSpacingExtra="26sp"
+                android:text="@string/step_fast"
+                android:textColor="#5f5d70"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/green_signal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <View
+                android:id="@+id/green_signal_icon"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/oval_green_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:letterSpacing="-0.05"
+                android:lineSpacingExtra="26sp"
+                android:text="@string/step_maintain"
+                android:textColor="#5f5d70"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/direction_icon_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/control_box_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="87dp">
+
+        <RelativeLayout
+            android:id="@+id/poi_mode_img_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/poi_mode_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/bt_addpoi" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/poi_point_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/poi_point_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13sp"
+                android:layout_marginTop="19dp"
+                android:text="@string/set_poi_title"
+                android:textColor="#173143"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/poi_line_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/poi_point_text"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18sp"
+                android:layout_marginEnd="13sp"
+                android:background="@color/c_f2f2f3" />
+
+            <RelativeLayout
+                android:id="@+id/poi_spinner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/poi_line_1">
+
+                <TextView
+                    android:id="@+id/poi_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="13sp"
+                    android:text="No. #"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/poi_spinner"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="1dip"
+                    android:layout_marginBottom="1dip"
+                    android:layout_toEndOf="@+id/poi_num" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/poi_line_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/poi_spinner_layout"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="3sp"
+                android:layout_marginEnd="13sp"
+                android:background="@color/c_f2f2f3" />
+
+
+            <RelativeLayout
+                android:id="@+id/poi_edit_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_below="@+id/poi_line_3"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="12dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/poi_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/poi_cancel"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/input_poi_name_message"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:singleLine="true" />
+
+                <RelativeLayout
+                    android:id="@+id/poi_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="8.1dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/delete_btn" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/poi_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/poi_edit_layout"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="13sp"
+                android:background="@color/c_d8d8d8" />
+
+            <RelativeLayout
+                android:id="@+id/poto_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/poi_line_2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/camera_button_1"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/round_background_00ca9d"
+                            android:text="사진 첨부" />
+
+                        <ImageView
+                            android:id="@+id/poto_img_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="15dp"
+                            android:scaleType="centerCrop" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="18sp"
+                        android:layout_marginEnd="13sp"
+                        android:background="@color/c_f2f2f3" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/camera_button_2"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/round_background_00ca9d"
+                            android:enabled="true"
+                            android:text="사진 첨부" />
+
+                        <ImageView
+                            android:id="@+id/poto_img_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="15dp"
+                            android:scaleType="centerCrop" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/poto_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/poto_layout"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18sp"
+                android:layout_marginEnd="13sp"
+                android:background="@color/c_f2f2f3" />
+
+            <LinearLayout
+                android:id="@+id/poi_btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_below="@+id/poto_line"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/poi_cancel_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="9dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_background_9d9d9d">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/cancel"
+                        android:textColor="#ffffff"
+                        android:textSize="14.9sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/poi_add_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="9dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_background_00ca9d">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/poi_registration"
+                        android:textColor="#ffffff"
+                        android:textSize="14.9sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/poi_btn_layout" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/voucher_recoding"
+        layout="@layout/voucher_recoding"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/poi_edit_box_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/c_00ca9d">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18sp"
+                android:text="POI 이름을 입력하세요."
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+
+            <RelativeLayout
+                android:id="@+id/poi_edit_text_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/poi_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/poi_cancel_layout"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:inputType="text"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/poi_cancel_layout"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_cancel_search" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/poi_save_btn"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/poi_edit_text_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="확인" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/wifi_log_text"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp" />
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="수집 준비중입니다. 잠시만 기디려주세요."
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

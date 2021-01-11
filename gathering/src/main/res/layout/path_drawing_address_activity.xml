@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="31dp">
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/address_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/arrow_left_img"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:src="@mipmap/arrow_left" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/setting_location_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/arrow_left_img"
+                    android:text="@string/setting_location"
+                    android:textColor="#5f5d70"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/my_location"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true">
+
+                    <ImageView
+                        android:id="@+id/my_location_img"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/ic_mylocation" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/my_location_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="-12dp"
+                        android:text="@string/location"
+                        android:textColor="#9d9d9d"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/address_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address_layout"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="57dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#9d9d9d"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/select_map_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/title_layout"
+            android:layout_marginTop="10dp"
+            android:background="@color/c_f2f2f3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/floors_layout"
+            android:layout_below="@+id/select_map_line"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <fragment
+                android:id="@+id/google_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/address_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/floors_layout"
+            android:layout_below="@+id/select_map_line"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/floors_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:layout_marginBottom="23dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/floors"
+                    android:textColor="#9d9d9d"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/c_9d9d9d" />
+
+                    <TextView
+                        android:id="@+id/floors_lever_picker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="#5f5d70"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="3층" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/make_map_btn"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="19dp"
+                android:background="@color/c_00ca9d">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting"
+                    android:textColor="#ffffff"
+                    android:textSize="14.9sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/sinjugu"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="신주쿠"
+            android:visibility="gone"
+            android:layout_above="@+id/floors_layout"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

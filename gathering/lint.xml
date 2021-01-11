@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="CommitPrefEdits" severity="ignore" />
+    <issue id="CutPasteId" severity="ignore" />
+    <issue id="DefaultLocale" severity="ignore" />
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="InlinedApi" severity="ignore" />
+    <issue id="MissingTranslation" severity="warning" />
+    <issue id="SdCardPath" severity="ignore" />
+    <issue id="ShowToast" severity="ignore" />
+    <issue id="SimpleDateFormat" severity="ignore" />
+</lint>

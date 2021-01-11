@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:background="@drawable/bg_image">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/title_bar03"
+        android:orientation="vertical" 
+        android:id="@+id/title_bar">
+    </LinearLayout>
+
+
+    <AutoCompleteTextView
+        android:id="@+id/setting_ip_text_view"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setting_ip_text_view"
+        android:layout_below="@+id/title_bar"
+        android:layout_marginTop="39dp"
+        android:text="서버 주소 입력"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+	<TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setting_port_text_view"
+        android:layout_below="@+id/setting_ip_text_view"
+        android:layout_marginTop="30dp"
+        android:text="포트 번호 입력"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	
+	<EditText
+        android:id="@+id/setting_port_text_view"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setting_ip_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10" 
+        android:inputType="number"/>
+	
+
+	<ImageButton
+	    android:id="@+id/setting_input_image_button"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/setting_port_text_view"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginTop="40dip"
+	    android:background="@drawable/btn_input" />
+
+</RelativeLayout>

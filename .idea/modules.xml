@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gEO2LBSPSClient/gEO2LBSPSClient.iml" filepath="$PROJECT_DIR$/.idea/modules/gEO2LBSPSClient/gEO2LBSPSClient.iml" group="gathering_wata-R&amp;D/gEO2LBSPSClient" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gathering/gathering.iml" filepath="$PROJECT_DIR$/.idea/modules/gathering/gathering.iml" group="gathering_wata-R&amp;D/gathering" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gathering_wata-R&amp;D.iml" filepath="$PROJECT_DIR$/.idea/modules/gathering_wata-R&amp;D.iml" group="gathering_wata-R&amp;D" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ible/ible.iml" filepath="$PROJECT_DIR$/.idea/modules/ible/ible.iml" group="gathering_wata-R&amp;D/ible" />
+    </modules>
+  </component>
+</project>

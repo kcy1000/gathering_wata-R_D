@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./gathering/libs/jazzlib.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gathering/libs/jazzlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

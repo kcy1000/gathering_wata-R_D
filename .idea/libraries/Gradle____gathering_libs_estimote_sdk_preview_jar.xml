@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./gathering/libs/estimote-sdk-preview.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gathering/libs/estimote-sdk-preview.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

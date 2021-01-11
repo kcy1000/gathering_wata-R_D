@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./gathering/libs/o2mapmobile.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gathering/libs/o2mapmobile.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

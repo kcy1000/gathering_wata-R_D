@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeAnimationButton">
+        <attr name="swipe_background" format="integer" />
+        <attr name="defaultDrawable" format="integer"/>
+        <attr name="defaultBackground" format="integer"/>
+        <attr name="rightSwipeDrawable" format="integer"/>
+        <attr name="rightSwipeBackground" format="integer"/>
+        <attr name="leftSwipeDrawable" format="integer"/>
+        <attr name="leftSwipeBackground" format="integer"/>
+        <attr name="duration" format="integer"/>
+    </declare-styleable>
+
+    <string-array name="sensitive">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    
+    <string-array name="feet">
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+    </string-array>
+    
+	<string-array name="gathering_period">
+	    <item>최단주기</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    
+    
+    <string-array name="setting_items">
+        <item>민감도 설정</item>
+        <item>수집 주기 설정</item>
+        <item>보폭 설정</item>
+        </string-array>
+    
+    <string-array name="setting_btn_items">
+        <item>설정</item>
+        <item>저장</item>
+        <item>종료</item>
+    </string-array>
+    
+    <string-array name="option_btn_items">
+        <item>수동 경로 수집</item>
+        <item>수동 지점 수집</item>
+        <item>자동 수집</item>
+    </string-array>
+    
+    
+    
+    
+</resources>

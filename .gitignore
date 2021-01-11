@@ -1,0 +1,6 @@
+# Project exclude paths
+/.gradle/
+/gathering/build/
+/gEO2LBSPSClient/build/
+/gEO2LBSPSClient/build/classes/java/main/
+/ible/build/

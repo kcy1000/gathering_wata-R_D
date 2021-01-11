@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./gathering/libs/apache-httpcomponents-httpcore.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gathering/libs/apache-httpcomponents-httpcore.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

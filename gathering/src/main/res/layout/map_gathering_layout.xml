@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/map_frm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0B3687">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/map_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="name"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/map_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/btn_back_click" />
+
+            <ImageView
+                android:id="@+id/map_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:src="@drawable/map_setting_click" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/gather_map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/gathering_bottom_bar"
+        android:layout_below="@+id/map_frm" />
+
+<!--    <com.geotwo.LBS.Gathering.SpinnableImageView-->
+<!--        android:id="@+id/spinnable_image"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:background="@drawable/arrow" />-->
+
+    <RelativeLayout
+        android:id="@+id/direction_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/gathering_bottom_bar"
+        android:layout_below="@+id/map_frm"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/d_0"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="30dp"
+            android:text="0도" />
+
+        <Button
+            android:id="@+id/d_45"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/d_180"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="60dp"
+            android:text="45도" />
+
+        <Button
+            android:id="@+id/d_90"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/d_135"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="90도" />
+
+        <Button
+            android:id="@+id/d_135"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/d_180"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="60dp"
+            android:text="135도" />
+
+        <Button
+            android:id="@+id/d_180"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:text="180도" />
+
+        <Button
+            android:id="@+id/d_225"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/d_180"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="60dp"
+            android:text="225도" />
+
+
+        <Button
+            android:id="@+id/d_270"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/d_225"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="70dp"
+            android:text="270도" />
+
+        <Button
+            android:id="@+id/d_315"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/d_0"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="70dp"
+            android:text="315도" />
+
+        <ImageView
+            android:id="@+id/direction_img"
+            android:layout_width="50dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/now_angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/d_90"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="0도"
+            android:textColor="@color/color_ff0000"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:id="@+id/angle_control_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/d_270"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/angle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:inputType="number"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/angle_p_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:text="+"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/angle_m_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="-"
+                android:textSize="26sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_way_record_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/gathering_bottom_bar"
+        android:background="@color/black"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기록 방향 : "
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/record_direction_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="정방향 "
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/record_reset_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:text="정방향"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/reverse_record_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:text="역방향 \n기록하기"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/record_list_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:text="기록\n내역"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/gathering_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#0B3687">
+
+        <LinearLayout
+            android:id="@+id/map_inner_frm_linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/gathering_select"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="수집방법선택"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+                <LinearLayout
+                    android:id="@+id/map_bottom_linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <Button
+                        android:id="@+id/map_path_select"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="경로선택"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/map_path_start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="시작"
+                        android:textColor="#00f"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/map_bottom_linear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/map_text_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="info"
+                        android:textColor="#00f"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/end_point"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="시작"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/map_bottom_linear3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <Button
+                        android:id="@+id/my_way_direction"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="경로 선택"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/my_way_path_start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="기록 시작"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/my_way_path_end"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="기록 종료"
+                        android:textColor="#00f"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/map_inner_frm_linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="invisible">
+
+            <Button
+                android:id="@+id/map_complete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="완 료"
+                android:textColor="#00f"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/map_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="취 소"
+                android:textColor="#f00"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/map_scan_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="3"
+                android:text="count"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/gatheringOrientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map_frm"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:src="@drawable/arrow" />
+
+
+    <TextView
+        android:id="@+id/gatheringInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gatheringOrientationDegree"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="#ff0000"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/gatheringOrientationDegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gatheringOrientation"
+        android:layout_alignEnd="@+id/gatheringOrientation"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:textColor="#ff0000"
+        android:textSize="12dp" />
+
+    <RelativeLayout
+        android:id="@+id/record_lisetview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="#99000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/my_way_listview_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/my_way_listview"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/list_ok_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/my_way_listview_layout"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:background="@color/color_fea65c"
+            android:text="확인"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+    </RelativeLayout>
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/white">-->
+<!--        <ImageView-->
+<!--            android:id="@+id/test_img"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:background="@drawable/arrow"-->
+<!--            android:visibility="visible" />-->
+<!--    </RelativeLayout>-->
+
+
+</RelativeLayout>

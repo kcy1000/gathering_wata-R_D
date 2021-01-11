@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wata.LAB_TEST.Gathering"
+    android:versionCode="2"
+    android:versionName="1.1">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        reserveLegacyExternalStorage="true"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@android:style/Theme.NoTitleBar">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCJ49ecQrqIsMufW6doF1urCsANOnbnN2U" />
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.wata.LAB_TEST.Gathering.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/camera_file"></meta-data>
+        </provider>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.IntroActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="unspecified"></activity>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme"></activity>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.SelectMapActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.GatheringActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified"></activity>
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.PathDrawingActivity"
+            android:hardwareAccelerated="true"
+            android:theme="@style/AppTheme"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.PathDrawingAddressActivity"
+            android:hardwareAccelerated="true"
+            android:theme="@style/AppTheme"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.PathDrawingNewActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"></activity>
+
+
+        <!--========================================================-->
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Voucher.VoucherActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="unspecified"></activity>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Voucher.SubwayAreaActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="unspecified"></activity>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Voucher.SubwayLineActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="unspecified"></activity>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Voucher.SubwayNameActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="unspecified"></activity>
+
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.GPS.GPSActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="unspecified"></activity>
+
+
+        <!--========================================================-->
+
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.MapSelectActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified"></activity>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.SimpleGatheringActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.SettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.GatherListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.SelectMapAct"
+            android:screenOrientation="portrait" />
+        <!--<activity-->
+        <!--android:name="com.geotwo.LBS.Gathering.GatheringPathListAct"-->
+        <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.ResultList_Location_Act"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.geotwo.LAB_TEST.Gathering.ResultList_Path_Act"
+            android:screenOrientation="portrait" />
+        <!--meta-data android:value="AIzaSyCiouNv6xPceLcua7-Ba-HXQ2-2EVz6peA" android:name="com.google.android.maps.v2.API_KEY"/-->
+        <!--meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/-->
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="1a8235e232a962da2c7c14604b98b226" />
+
+        <activity android:name="com.geotwo.LAB_TEST.Gathering.BleIgnoreSettingActivity" />
+        <activity android:name="com.geotwo.LAB_TEST.Gathering.BleIgnoreSettingAddActivity" />
+
+        <activity android:name="com.geotwo.LAB_TEST.Gathering.BleAddSettingActivity" />
+        <activity android:name="com.geotwo.LAB_TEST.Gathering.BleAddSettingAddActivity" />
+
+        <service android:name="geo2.lbsp.ible.service.BLEService"></service>
+    </application>
+
+</manifest>

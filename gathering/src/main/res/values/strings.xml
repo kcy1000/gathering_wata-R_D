@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WATA_LBS</string>
+    <string name="sensitive_title">민감도 설정</string>
+    <string name="delay_time_title">수집주기 설정</string>
+    <string name="feet_title">보폭 선택</string>
+
+    <string name="turn_right_message">오른쪽으로 방향으로 돌려주세요.</string>
+
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+
+    <string name="registration">등록</string>
+    <string name="poi_registration">POI등록</string>
+    <string name="point_registration">지점등록</string>
+
+    <string name="reverse">역방향</string>
+    <string name="direction">정방향</string>
+
+    <string name="completion">완료</string>
+    <string name="r_completion">역방향 미완료</string>
+    <string name="r_incomplete">역방향 완료</string>
+    <string name="line">라인</string>
+    <string name="point">지점</string>
+
+    <string name="poi_list">POI 내역</string>
+    <string name="record_list">기록 내역</string>
+    <string name="choice_direction">방향 선택</string>
+    <string name="record_start">기록 시작</string>
+    <string name="record_end">기록 종료</string>
+    <string name="record_reset">재설정</string>
+    <string name="reverse_record">역방향 기록</string>
+
+    <string name="point_move">지점이동</string>
+    <string name="delete">삭제</string>
+    <string name="input_poi_name_message"> POI 이름을 입력하세요.</string>
+    <string name="make_map_message"> 이 위치에 지도를 생성하시겠습니까?</string>
+    <string name="point_movement_message"> 해당위치로 이동 후 이동방향을 설정해 주세요.</string>
+    <string name="revers_record_start_message"> 역방향 경로 수집을 시작합니다.</string>
+
+    <string name="revers_record_start_message_1"> 해당위치로 이동 후 수집을 시작해주세요. .</string>
+
+    <string name="error_message_1">오류가 발생하였습니다. 다시 시도해주세요.  </string>
+
+    <string name="gps_address_error_msg_1"> 통신 상태를 확인후 APP을 재실행 하여주세요. </string>
+    <string name="gps_address_error_msg_2"> 잘못된 GPS 좌표입니다.</string>
+    <string name="gps_address_error_msg_3"> 해당위치 주소정보를 찾을수 없습니다. </string>
+
+    <string name="setting_location">위치설정 </string>
+    <string name="floors">층수 </string>
+    <string name="none_address_message_1">지정된 주소가 없습니다. 화면 상단을 위치설정을 확인해주세요. </string>
+    <string name="save_box">보관함 </string>
+    <string name="select_map">지도를 선택하세요 </string>
+
+
+    <string name="none_map">실내지도가 없습니다 </string>
+    <string name="my_location_setting">현재위치를 설정하여 </string>
+    <string name="start_record">"수집을 시작하세요 "</string>
+
+    <string name="yes_map">실내지도가 있습니다 </string>
+    <string name="up_load_map">실내지도를 업로드한 후 </string>
+    <string name="start_go">시작하기</string>
+
+    <string name="start">시작</string>
+    <string name="stop">종료</string>
+
+    <string name="setting">설정</string>
+    <string name="finish_app_message">앱을 종료하시겠습니까?</string>
+    <string name="finish_record_message">기록을 종료하시겠습니까?</string>
+    <string name="step_setting">보폭설정</string>
+
+    <string name="start_point">시작지점</string>
+    <string name="end_point">종료지점</string>
+
+    <string name="fast_step_slow_step_message">수집속도가  빠릅니다. 걸음 속도를 늦춰주세요.</string>
+    <string name="step_maintain">적정</string>
+    <string name="step_fast">빠름</string>
+
+    <string name="record_cancel">경로 취소</string>
+    <string name="again_record">재 수집</string>
+
+    <string name="on_poi_mode">POI 모드가 설정되었습니다. </string>
+    <string name="off_poi_mode">POI 모드가 해제되었습니다. </string>
+
+    <string name="on_compass_mode">나침판이 설정되었습니다. </string>
+    <string name="off_compass_mode">나침판이 해제되었습니다. </string>
+    <string name="start_recording">수집을 시작해주세요.</string>
+
+    <string name="start_point_check_message">시작점을 선택해주세요.</string>
+
+    <string name="on_search_wifi_wait_message">신호를 찾는 중입니다. 잠시만 기다려주세요.</string>
+
+    <string name="wifi_sensor">2.4 - 5Ghz 공용</string>
+    <string name="gyro_sensor">자이로센서</string>
+
+    <string name="move_to_start_record"> 해당위치로 이동 후 수집을 시작해주세요</string>
+    <string name="finish_message">목적지에 도착하였습니다.</string>
+    <string name="new_box">새로운 공간 정보</string>
+    <string name="location">내위치</string>
+    <string name="send">전송</string>
+    <string name="collection">수집</string>
+    <string name="collection_start">시작</string>
+    <string name="end">종료</string>
+    <string name="collection_list">기록내역</string>
+    <string name="initialization">초기화</string>
+    <string name="frequency_setting">주파수 환경</string>
+    <string name="collection_setting">수집 환경</string>
+    <string name="map_rotation">지도 자동회전</string>
+    <string name="check">화인</string>
+    <string name="of_steps_taken">걸음</string>
+    <string name="set_poi_title"> POI 정보 입력</string>
+    <string name="stop_move_message">목적지에 도착하였습니다.\n 기록을 종료해주세요.</string>
+    <string name="poi_delete_message">POI를 삭제 하시겠습니까?</string>
+    <string name="path">경로</string>
+    <string name="send_file">파일 전송</string>
+    <string name="send_file_none">저장된 파일이 없습니다</string>
+    <string name="send_file_message_1">파일을 전송하시겠습니까?</string>
+    <string name="detail_direction">미세방향조절</string>
+    <string name="set_usim_message">USIM 장착 여부를 확인해주세요. </string>
+    <string name="hacking_tool_message">비정상적인 상태로 App을 실행하였습니다.</string>
+    <string name="input_point_message">지점을 등록하시겠습니까?</string>
+    <string name="recording_list_error_message">기록중입니다. 우선 기록을 종료해주세요.</string>
+
+
+
+    <string name="subway_title">지하철 수집하기</string>
+    <string name="area_name">지역설정</string>
+    <string name="subway_line_name">호선선택</string>
+    <string name="subway_name">지하철 선택</string>
+    <string name="line_select">경로 설정</string>
+
+
+    <string name="area">지역</string>
+    <string name="company_name">기업명</string>
+    <string name="subway">지하철</string>
+    <string name="company">기업</string>
+    <string name="company_info_setting">기업정보 설정</string>
+    <string name="subway_info_setting">지하철정보 설정</string>
+
+    <string name="finish_upload">파일전송이 완료 되었습니다.</string>
+
+
+
+    <!-- 카카오 해시키값 개발버전
+    4OWIXmeecTyl5cvU4uDkmAZRDLw=
+    -->
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image" >
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/title_bar03"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mapselect_image"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dip"
+        android:background="@drawable/title_image4" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapselect_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/mapselect_layout_station"
+            android:layout_width="wrap_content"
+            android:layout_height="60dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/sub_btn01"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/mapselect_spinner_station"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="1dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/sub_btn03" />
+
+            <ImageView
+                android:id="@+id/mapselect_imageview_station"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="1dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dip"
+                android:layout_weight="0"
+                android:background="@drawable/sub_btn04" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mapselect_layout_floor"
+            android:layout_width="wrap_content"
+            android:layout_height="60dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/sub_btn02"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/mapselect_spinner_floor"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="1dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/sub_btn03" />
+
+            <ImageView
+                android:id="@+id/mapselect_imageview_floor"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="1dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="1dip"
+                android:layout_weight="0"
+                android:background="@drawable/sub_btn04" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/mapselect_ok"
+        android:layout_width="100dip"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/sub_btn06_2" />
+
+    <ImageButton
+        android:id="@+id/mapselect_back"
+        android:layout_width="100dip"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sub_btn05_2" />
+
+</RelativeLayout>
